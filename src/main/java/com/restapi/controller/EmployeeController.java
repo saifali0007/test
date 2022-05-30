@@ -32,6 +32,11 @@ public class EmployeeController {
 		return "you are logged in";
 	}
 	
+	@GetMapping("/git")
+	public String gitshow() {
+		return "branching";
+	}
+	
 	@PostMapping("/addEmployees")
 	public ResponseEntity<Employee> saveEmployee(Employee employee){
 	
