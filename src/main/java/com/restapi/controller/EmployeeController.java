@@ -21,11 +21,16 @@ import com.restapi.service.EmployeeService;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/login")
 public class EmployeeController {
 	
 	@Autowired
 	private EmployeeService employeeService;
+	
+	@GetMapping("/security")
+	public String security() {
+		return "you are logged in";
+	}
 	
 	@PostMapping("/addEmployees")
 	public ResponseEntity<Employee> saveEmployee(Employee employee){
