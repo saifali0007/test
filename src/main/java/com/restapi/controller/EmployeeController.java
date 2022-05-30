@@ -37,6 +37,11 @@ public class EmployeeController {
 		return "branching";
 	}
 	
+	@GetMapping("/lit")
+	public String litshows() {
+		return "branching";
+	}
+	
 	@PostMapping("/addEmployees")
 	public ResponseEntity<Employee> saveEmployee(Employee employee){
 	
